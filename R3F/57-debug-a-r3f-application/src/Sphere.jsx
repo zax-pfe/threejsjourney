@@ -1,0 +1,10 @@
+import React from "react";
+
+export default function Sphere() {
+  return (
+    <mesh position-x={-2}>
+      <sphereGeometry />
+      <meshStandardMaterial color="orange" />
+    </mesh>
+  );
+}
