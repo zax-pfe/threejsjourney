@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import { Canvas } from "@react-three/fiber";
 import Experience from "./Experience.jsx";
 import { Leva } from "leva";
+import { Loader } from "@react-three/drei";
+import { Suspense } from "react";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
@@ -17,7 +19,10 @@ root.render(
         position: [4, 2, 6],
       }}
     >
-      <Experience />
+      <Suspense fallback={null}>
+        <Experience />
+      </Suspense>
     </Canvas>
+    <Loader />
   </>,
 );
